@@ -56,7 +56,7 @@ firmware.o:
 		--rename-section .data=.firmware \
 		-O elf64-x86-64 -B i386 firmware.o
 ram.o:
-	arm-linux-gnueabi-objcopy \
+	objcopy \
 		-I binary ../cores/d02032-core.img \
 		--change-addresses=0x20000000 \
 		--rename-section .data=.sram \
